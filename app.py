@@ -15,40 +15,54 @@ st.set_page_config(
 
 
 # ============================================================
-# DARK BLACK / WHITE / BLUE DESIGN
+# REFINED DARK / BLUE THEME
+# (Same color identity, cleaner spacing, better typography)
 # ============================================================
 
 st.markdown("""
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap');
+
+
+/* ==========================================================
+   BASE
+========================================================== */
+
+html, body, [class*="css"] {
+
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+
 .stApp {
 
     background:
         radial-gradient(
-            circle at 10% 10%,
-            rgba(0, 119, 255, 0.12),
-            transparent 30%
+            circle at 8% 8%,
+            rgba(21,151,255,0.10),
+            transparent 32%
         ),
 
         radial-gradient(
-            circle at 90% 20%,
-            rgba(0, 119, 255, 0.08),
-            transparent 30%
+            circle at 92% 15%,
+            rgba(21,151,255,0.06),
+            transparent 32%
         ),
 
         #05070B;
 
-    color: white;
+    color: #E9EFF6;
 }
 
 
 .block-container {
 
-    max-width: 1150px;
+    max-width: 1100px;
 
-    padding-top: 35px;
+    padding-top: 40px;
 
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 
@@ -58,41 +72,33 @@ st.markdown("""
 
 .hero {
 
-    background:
-        linear-gradient(
-            145deg,
-            #0D1520,
-            #070B11
-        );
+    background: #0A0F17;
 
-    border:
-        1px solid
-        rgba(21,151,255,.35);
+    border: 1px solid rgba(21,151,255,.22);
 
-    border-radius: 25px;
+    border-radius: 22px;
 
-    padding: 45px 30px;
+    padding: 50px 40px;
 
     text-align: center;
 
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 
-    box-shadow:
-        0 15px 50px
-        rgba(0,0,0,.5),
-
-        0 0 40px
-        rgba(0,119,255,.08);
+    box-shadow: 0 20px 60px rgba(0,0,0,.45);
 }
 
 
 .hero-title {
 
-    font-size: 46px;
+    font-family: 'Sora', sans-serif;
 
-    font-weight: 900;
+    font-size: 42px;
 
-    color: white;
+    font-weight: 700;
+
+    color: #F5F8FC;
+
+    letter-spacing: -0.5px;
 }
 
 
@@ -104,13 +110,21 @@ st.markdown("""
 
 .hero-text {
 
-    color: #AAB6C5;
+    font-family: 'Inter', sans-serif;
 
-    font-size: 17px;
+    color: #8FA0B5;
 
-    line-height: 1.7;
+    font-size: 16px;
 
-    margin-top: 12px;
+    line-height: 1.75;
+
+    margin-top: 14px;
+
+    max-width: 560px;
+
+    margin-left: auto;
+
+    margin-right: auto;
 }
 
 
@@ -120,29 +134,33 @@ st.markdown("""
 
 .section-title {
 
-    font-size: 25px;
+    font-family: 'Sora', sans-serif;
 
-    font-weight: 850;
+    font-size: 21px;
 
-    color: white;
+    font-weight: 600;
 
-    margin-top: 20px;
+    color: #F5F8FC;
+
+    margin-top: 8px;
 }
 
 
 .section-line {
 
-    width: 65px;
+    width: 48px;
 
     height: 3px;
 
     background: #1597FF;
 
-    border-radius: 5px;
+    border-radius: 4px;
 
-    margin-top: 8px;
+    margin-top: 10px;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
+
+    opacity: .85;
 }
 
 
@@ -152,52 +170,43 @@ st.markdown("""
 
 div[data-baseweb="select"] > div {
 
-    background-color:
-        #0B1119 !important;
+    background-color: #0B1119 !important;
 
-    border:
-        1px solid
-        #273444 !important;
+    border: 1px solid #202B38 !important;
 
-    border-radius:
-        11px !important;
+    border-radius: 10px !important;
 
-    color:
-        white !important;
+    color: #E9EFF6 !important;
 }
 
 
 div[data-baseweb="select"] > div:hover {
 
-    border-color:
-        #1597FF !important;
+    border-color: #1597FF !important;
 }
 
 
 .stNumberInput input {
 
-    background:
-        #0B1119 !important;
+    background: #0B1119 !important;
 
-    color:
-        white !important;
+    color: #E9EFF6 !important;
 
-    border:
-        1px solid
-        #273444 !important;
+    border: 1px solid #202B38 !important;
 
-    border-radius:
-        11px !important;
+    border-radius: 10px !important;
 }
 
 
 label {
 
-    color:
-        #DCE5EE !important;
+    font-family: 'Inter', sans-serif;
 
-    font-weight:
-        600 !important;
+    color: #B7C3D1 !important;
+
+    font-weight: 500 !important;
+
+    font-size: 14px !important;
 }
 
 
@@ -209,41 +218,33 @@ div.stButton > button {
 
     width: 100%;
 
-    height: 60px;
+    height: 56px;
 
-    border-radius: 14px;
+    border-radius: 12px;
 
-    background:
-        linear-gradient(
-            90deg,
-            #006FFF,
-            #159FFF
-        );
+    background: linear-gradient(90deg, #0A6FE0, #1597FF);
 
     color: white;
 
     border: none;
 
-    font-size: 19px;
+    font-family: 'Sora', sans-serif;
 
-    font-weight: 800;
+    font-size: 17px;
 
-    box-shadow:
-        0 10px 30px
-        rgba(0,119,255,.25);
+    font-weight: 600;
 
-    transition: .2s;
+    box-shadow: 0 12px 28px rgba(21,151,255,.22);
+
+    transition: transform .15s ease, box-shadow .15s ease;
 }
 
 
 div.stButton > button:hover {
 
-    transform:
-        translateY(-2px);
+    transform: translateY(-1px);
 
-    box-shadow:
-        0 15px 35px
-        rgba(0,119,255,.4);
+    box-shadow: 0 16px 34px rgba(21,151,255,.32);
 }
 
 
@@ -253,70 +254,73 @@ div.stButton > button:hover {
 
 .result-card {
 
-    background:
-        linear-gradient(
-            145deg,
-            #0D1622,
-            #070B11
-        );
+    background: #0A0F17;
 
-    border:
-        1px solid
-        rgba(21,151,255,.45);
+    border: 1px solid rgba(21,151,255,.28);
 
-    border-radius: 25px;
+    border-radius: 22px;
 
-    padding: 40px 25px;
+    padding: 44px 30px;
 
     text-align: center;
 
-    margin-top: 35px;
+    margin-top: 36px;
 
-    box-shadow:
-        0 15px 50px
-        rgba(0,0,0,.5);
+    box-shadow: 0 20px 60px rgba(0,0,0,.45);
 }
 
 
 .result-title {
 
-    font-size: 28px;
+    font-family: 'Sora', sans-serif;
 
-    font-weight: 800;
+    font-size: 22px;
 
-    color: white;
+    font-weight: 600;
+
+    color: #B7C3D1;
 }
 
 
 .probability {
 
-    font-size: 58px;
+    font-family: 'JetBrains Mono', monospace;
 
-    font-weight: 900;
+    font-size: 54px;
+
+    font-weight: 700;
 
     color: #1597FF;
 
-    margin-top: 12px;
+    margin-top: 14px;
+
+    letter-spacing: -1px;
 }
 
 
 .probability-label {
 
-    color: #8F9DAD;
+    font-family: 'Inter', sans-serif;
 
-    font-size: 15px;
+    color: #6E7C8C;
+
+    font-size: 14px;
+
+    margin-top: 4px;
 }
 
 
 .risk {
 
-    font-size: 25px;
+    font-family: 'Sora', sans-serif;
 
-    font-weight: 800;
+    font-size: 20px;
 
-    color: white;
+    font-weight: 600;
 
-    margin-top: 20px;
+    color: #F5F8FC;
+
+    margin-top: 22px;
 }
 
 
@@ -328,37 +332,39 @@ div.stButton > button:hover {
 
     text-align: center;
 
-    margin-top: 60px;
+    margin-top: 64px;
 
-    padding-top: 25px;
+    padding-top: 28px;
 
-    border-top:
-        1px solid
-        #202B38;
+    border-top: 1px solid #171F29;
 
     color: #778494;
-
-    font-size: 15px;
 }
 
 
 .footer-created {
 
-    font-size: 15px;
+    font-family: 'Inter', sans-serif;
 
-    color: #8996A5;
+    font-size: 13px;
+
+    color: #5E6B7A;
 }
 
 
 .footer-name {
 
-    font-size: 24px;
+    font-family: 'Sora', sans-serif;
 
-    font-weight: 900;
+    font-size: 21px;
 
-    color: white;
+    font-weight: 700;
 
-    margin-top: 7px;
+    color: #E9EFF6;
+
+    margin-top: 6px;
+
+    letter-spacing: .2px;
 }
 
 
@@ -370,11 +376,13 @@ div.stButton > button:hover {
 
 .footer-project {
 
+    font-family: 'Inter', sans-serif;
+
     margin-top: 8px;
 
     font-size: 13px;
 
-    color: #5E6B7A;
+    color: #4A5563;
 }
 
 
@@ -384,8 +392,7 @@ div.stButton > button:hover {
 
 div[data-testid="stProgress"] > div > div {
 
-    background-color:
-        #1597FF !important;
+    background-color: #1597FF !important;
 }
 
 </style>
@@ -420,15 +427,14 @@ except Exception as e:
 
 
 # ============================================================
-# HEADER  (FIXED: single line, no indentation/blank lines)
+# HEADER  (single line, no indentation/blank lines)
 # ============================================================
 
 st.markdown(
     '<div class="hero">'
     '<div class="hero-title">Telco Customer <span>Churn AI</span></div>'
     '<div class="hero-text">'
-    'Intelligent customer churn prediction powered by Machine Learning and XGBoost.'
-    '<br><br>'
+    'Intelligent customer churn prediction powered by Machine Learning and XGBoost. '
     'Analyze customer behavior and estimate the probability of customer churn.'
     '</div>'
     '</div>',
@@ -437,7 +443,7 @@ st.markdown(
 
 
 # ============================================================
-# CUSTOMER INFORMATION  (FIXED)
+# CUSTOMER INFORMATION
 # ============================================================
 
 st.markdown(
@@ -760,7 +766,7 @@ if st.button("Analyze Customer"):
 
         if probability < 0.30:
 
-            risk = "LOW RISK"
+            risk = "Low Risk"
 
             message = (
                 "This customer currently shows "
@@ -769,7 +775,7 @@ if st.button("Analyze Customer"):
 
         elif probability < 0.60:
 
-            risk = "MEDIUM RISK"
+            risk = "Medium Risk"
 
             message = (
                 "This customer shows a moderate "
@@ -778,7 +784,7 @@ if st.button("Analyze Customer"):
 
         else:
 
-            risk = "HIGH RISK"
+            risk = "High Risk"
 
             message = (
                 "This customer shows a high churn "
@@ -787,7 +793,7 @@ if st.button("Analyze Customer"):
 
 
         # ====================================================
-        # RESULT  (FIXED: single line, no indentation/blank lines)
+        # RESULT  (single line, no indentation/blank lines)
         # ====================================================
 
         st.markdown(
@@ -832,7 +838,7 @@ if st.button("Analyze Customer"):
 
 
 # ============================================================
-# FOOTER  (FIXED: single line, no indentation/blank lines)
+# FOOTER  (single line, no indentation/blank lines)
 # ============================================================
 
 st.markdown(
