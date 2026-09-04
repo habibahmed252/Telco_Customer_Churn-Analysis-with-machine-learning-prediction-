@@ -59,73 +59,9 @@ html, body, [class*="css"] {
 
     max-width: 1100px;
 
-    padding-top: 24px;
+    padding-top: 34px;
 
     padding-bottom: 50px;
-}
-
-
-/* ==========================================================
-   TOP BAR (name lives here now)
-========================================================== */
-
-.topbar {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding-bottom: 16px;
-
-    margin-bottom: 24px;
-
-    border-bottom: 1px solid #141B24;
-}
-
-
-.topbar-brand {
-
-    font-family: 'Sora', sans-serif;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    color: #6E7C8C;
-}
-
-
-.topbar-brand span {
-
-    color: #1597FF;
-}
-
-
-.topbar-author {
-
-    font-family: 'Sora', sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    color: #B7C3D1;
-
-    background: #0B1119;
-
-    border: 1px solid #1B2531;
-
-    padding: 7px 16px;
-
-    border-radius: 100px;
-}
-
-
-.topbar-author span {
-
-    color: #1597FF;
 }
 
 
@@ -145,7 +81,7 @@ html, body, [class*="css"] {
 
     text-align: center;
 
-    margin-bottom: 36px;
+    margin-bottom: 18px;
 
     box-shadow: 0 20px 60px rgba(0,0,0,.45);
 }
@@ -188,6 +124,34 @@ html, body, [class*="css"] {
     margin-left: auto;
 
     margin-right: auto;
+}
+
+
+/* ==========================================================
+   CREATED BY — name lives right below the hero now
+========================================================== */
+
+.created-by {
+
+    text-align: center;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 14px;
+
+    color: #6E7C8C;
+
+    margin-bottom: 38px;
+}
+
+
+.created-by span {
+
+    font-family: 'Sora', sans-serif;
+
+    font-weight: 600;
+
+    color: #1597FF;
 }
 
 
@@ -468,19 +432,6 @@ except Exception as e:
 
 
 # ============================================================
-# TOP BAR — name lives here now
-# ============================================================
-
-st.markdown(
-    '<div class="topbar">'
-    '<div class="topbar-brand">Telco <span>Churn AI</span></div>'
-    '<div class="topbar-author">Eng. <span>Habiba Ahmed</span></div>'
-    '</div>',
-    unsafe_allow_html=True
-)
-
-
-# ============================================================
 # HERO
 # ============================================================
 
@@ -497,11 +448,21 @@ st.markdown(
 
 
 # ============================================================
+# CREATED BY — right below the hero box
+# ============================================================
+
+st.markdown(
+    '<div class="created-by">Created by <span>Eng. Habiba Ahmed Talat</span></div>',
+    unsafe_allow_html=True
+)
+
+
+# ============================================================
 # CUSTOMER INFORMATION — core, high-impact fields only
 # ============================================================
 
 st.markdown(
-    '<div class="section-title">Customer Information</div>'
+    '<div class="section-title">Please enter your information</div>'
     '<div class="section-line"></div>',
     unsafe_allow_html=True
 )
@@ -595,13 +556,13 @@ with col2:
 
 
 # ============================================================
-# COLUMN 3 — Internet & Support
+# COLUMN 3 — Service Information
 # ============================================================
 
 with col3:
 
     st.markdown(
-        '<div class="group-label">Internet &amp; Support</div>',
+        '<div class="group-label">Please enter service information</div>',
         unsafe_allow_html=True
     )
 
