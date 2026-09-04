@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import joblib
@@ -421,43 +420,31 @@ except Exception as e:
 
 
 # ============================================================
-# HEADER
+# HEADER  (FIXED: single line, no indentation/blank lines)
 # ============================================================
 
-st.markdown("""
-<div class="hero">
-
-    <div class="hero-title">
-        Telco Customer <span>Churn AI</span>
-    </div>
-
-    <div class="hero-text">
-
-        Intelligent customer churn prediction
-        powered by Machine Learning and XGBoost.
-
-        <br>
-
-        Analyze customer behavior and estimate
-        the probability of customer churn.
-
-    </div>
-
-</div>
-""", unsafe_allow_html=True)
+st.markdown(
+    '<div class="hero">'
+    '<div class="hero-title">Telco Customer <span>Churn AI</span></div>'
+    '<div class="hero-text">'
+    'Intelligent customer churn prediction powered by Machine Learning and XGBoost.'
+    '<br><br>'
+    'Analyze customer behavior and estimate the probability of customer churn.'
+    '</div>'
+    '</div>',
+    unsafe_allow_html=True
+)
 
 
 # ============================================================
-# CUSTOMER INFORMATION
+# CUSTOMER INFORMATION  (FIXED)
 # ============================================================
 
-st.markdown("""
-<div class="section-title">
-    Customer Information
-</div>
-
-<div class="section-line"></div>
-""", unsafe_allow_html=True)
+st.markdown(
+    '<div class="section-title">Customer Information</div>'
+    '<div class="section-line"></div>',
+    unsafe_allow_html=True
+)
 
 
 col1, col2, col3 = st.columns(3)
@@ -800,32 +787,18 @@ if st.button("Analyze Customer"):
 
 
         # ====================================================
-        # RESULT
+        # RESULT  (FIXED: single line, no indentation/blank lines)
         # ====================================================
 
-        st.markdown(f"""
-
-        <div class="result-card">
-
-            <div class="result-title">
-                Prediction Result
-            </div>
-
-            <div class="probability">
-                {percentage:.1f}%
-            </div>
-
-            <div class="probability-label">
-                Estimated Customer Churn Probability
-            </div>
-
-            <div class="risk">
-                {risk}
-            </div>
-
-        </div>
-
-        """, unsafe_allow_html=True)
+        st.markdown(
+            '<div class="result-card">'
+            '<div class="result-title">Prediction Result</div>'
+            f'<div class="probability">{percentage:.1f}%</div>'
+            '<div class="probability-label">Estimated Customer Churn Probability</div>'
+            f'<div class="risk">{risk}</div>'
+            '</div>',
+            unsafe_allow_html=True
+        )
 
 
         st.write("")
@@ -859,24 +832,16 @@ if st.button("Analyze Customer"):
 
 
 # ============================================================
-# FOOTER
+# FOOTER  (FIXED: single line, no indentation/blank lines)
 # ============================================================
 
-st.markdown("""
-<div class="footer">
-
-    <div class="footer-created">
-        Created by
-    </div>
-
-    <div class="footer-name">
-        Eng. <span>Habiba Ahmed</span>
-    </div>
-
-    <div class="footer-project">
-        Telco Customer Churn Prediction
-        • Machine Learning • XGBoost
-    </div>
-
-</div>
-""", unsafe_allow_html=True)
+st.markdown(
+    '<div class="footer">'
+    '<div class="footer-created">Created by</div>'
+    '<div class="footer-name">Eng. <span>Habiba Ahmed</span></div>'
+    '<div class="footer-project">'
+    'Telco Customer Churn Prediction • Machine Learning • XGBoost'
+    '</div>'
+    '</div>',
+    unsafe_allow_html=True
+)
