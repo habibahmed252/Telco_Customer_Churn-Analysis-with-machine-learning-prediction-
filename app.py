@@ -57,7 +57,7 @@ html, body, [class*="css"] {
 
 .block-container {
 
-    max-width: 1100px;
+    max-width: 1150px;
 
     padding-top: 34px;
 
@@ -128,7 +128,7 @@ html, body, [class*="css"] {
 
 
 /* ==========================================================
-   CREATED BY — name lives right below the hero now
+   CREATED BY
 ========================================================== */
 
 .created-by {
@@ -448,7 +448,7 @@ st.markdown(
 
 
 # ============================================================
-# CREATED BY — right below the hero box
+# CREATED BY
 # ============================================================
 
 st.markdown(
@@ -458,27 +458,28 @@ st.markdown(
 
 
 # ============================================================
-# CUSTOMER INFORMATION — core, high-impact fields only
+# SERVICE INFORMATION — everything service/billing related
+# is core and always visible
 # ============================================================
 
 st.markdown(
-    '<div class="section-title">Please enter your information</div>'
+    '<div class="section-title">Please enter service information</div>'
     '<div class="section-line"></div>',
     unsafe_allow_html=True
 )
 
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 
 # ============================================================
-# COLUMN 1 — Tenure & Contract
+# COLUMN 1 — Account & Contract
 # ============================================================
 
 with col1:
 
     st.markdown(
-        '<div class="group-label">Tenure &amp; Contract</div>',
+        '<div class="group-label">Account &amp; Contract</div>',
         unsafe_allow_html=True
     )
 
@@ -518,16 +519,54 @@ with col1:
     )
 
 
+    paperless = st.selectbox(
+        "Paperless Billing",
+
+        [
+            "Yes",
+            "No"
+        ]
+    )
+
+
 # ============================================================
-# COLUMN 2 — Charges
+# COLUMN 2 — Phone & Internet
 # ============================================================
 
 with col2:
 
     st.markdown(
-        '<div class="group-label">Charges</div>',
+        '<div class="group-label">Phone &amp; Internet</div>',
         unsafe_allow_html=True
     )
+
+    phone = st.selectbox(
+        "Phone Service",
+        ["Yes", "No"]
+    )
+
+
+    multiple_lines = st.selectbox(
+        "Multiple Lines",
+
+        [
+            "Yes",
+            "No",
+            "No phone service"
+        ]
+    )
+
+
+    internet = st.selectbox(
+        "Internet Service",
+
+        [
+            "DSL",
+            "Fiber optic",
+            "No"
+        ]
+    )
+
 
     monthly = st.number_input(
         "Monthly Charges",
@@ -542,40 +581,16 @@ with col2:
     )
 
 
-    total = st.number_input(
-        "Total Charges (lifetime spend)",
-
-        min_value=0.0,
-
-        max_value=50000.0,
-
-        value=1000.0,
-
-        step=10.0
-    )
-
-
 # ============================================================
-# COLUMN 3 — Service Information
+# COLUMN 3 — Add-on Services
 # ============================================================
 
 with col3:
 
     st.markdown(
-        '<div class="group-label">Please enter service information</div>',
+        '<div class="group-label">Add-on Services</div>',
         unsafe_allow_html=True
     )
-
-    internet = st.selectbox(
-        "Internet Service",
-
-        [
-            "DSL",
-            "Fiber optic",
-            "No"
-        ]
-    )
-
 
     online_security = st.selectbox(
         "Online Security",
@@ -584,6 +599,28 @@ with col3:
             "Security Enabled",
             "No Security",
             "No internet service"
+        ]
+    )
+
+
+    online_backup = st.selectbox(
+        "Online Backup",
+
+        [
+            "Backup Enabled",
+            "No Online Backup",
+            "No Internet Service"
+        ]
+    )
+
+
+    device_protection = st.selectbox(
+        "Device Protection",
+
+        [
+            "Protection Enabled",
+            "No Device Protection",
+            "No Internet Service"
         ]
     )
 
@@ -600,12 +637,45 @@ with col3:
 
 
 # ============================================================
-# OPTIONAL DETAILS — lower-impact fields, collapsed by default
+# COLUMN 4 — Entertainment
+# ============================================================
+
+with col4:
+
+    st.markdown(
+        '<div class="group-label">Entertainment</div>',
+        unsafe_allow_html=True
+    )
+
+    streaming_tv = st.selectbox(
+        "Streaming TV Service",
+
+        [
+            "Streaming TV",
+            "No Streaming TV",
+            "No Internet Service"
+        ]
+    )
+
+
+    streaming_movies = st.selectbox(
+        "Streaming Movies Service",
+
+        [
+            "Streaming Movies",
+            "No Streaming Movies",
+            "No Internet Service"
+        ]
+    )
+
+
+# ============================================================
+# OPTIONAL DETAILS — customer's own personal info only
 # ============================================================
 
 st.write("")
 
-with st.expander("Optional details"):
+with st.expander("Optional details — customer profile"):
 
     ocol1, ocol2, ocol3, ocol4 = st.columns(4)
 
@@ -616,6 +686,8 @@ with st.expander("Optional details"):
             ["Male", "Female"]
         )
 
+    with ocol2:
+
         senior = st.selectbox(
             "Senior Citizen",
             [0, 1],
@@ -624,84 +696,18 @@ with st.expander("Optional details"):
                 "Yes" if x == 1 else "No"
         )
 
+    with ocol3:
+
         partner = st.selectbox(
             "Partner",
             ["Yes", "No"]
         )
 
-    with ocol2:
+    with ocol4:
 
         dependents = st.selectbox(
             "Dependents",
             ["Yes", "No"]
-        )
-
-        phone = st.selectbox(
-            "Phone Service",
-            ["Yes", "No"]
-        )
-
-        multiple_lines = st.selectbox(
-            "Multiple Lines",
-
-            [
-                "Yes",
-                "No",
-                "No phone service"
-            ]
-        )
-
-    with ocol3:
-
-        online_backup = st.selectbox(
-            "Online Backup",
-
-            [
-                "Backup Enabled",
-                "No Online Backup",
-                "No Internet Service"
-            ]
-        )
-
-        device_protection = st.selectbox(
-            "Device Protection",
-
-            [
-                "Protection Enabled",
-                "No Device Protection",
-                "No Internet Service"
-            ]
-        )
-
-        paperless = st.selectbox(
-            "Paperless Billing",
-
-            [
-                "Yes",
-                "No"
-            ]
-        )
-
-    with ocol4:
-
-        streaming_tv = st.selectbox(
-            "Streaming TV Service",
-
-            [
-                "Streaming TV",
-                "No Streaming TV",
-                "No Internet Service"
-            ]
-        )
-
-        streaming_movies = st.selectbox(
-            "Streaming Movies Service",
-
-            [
-                "Streaming Movies",
-                "No Streaming Movies",
-                "No Internet Service"
-            ]
         )
 
 
@@ -715,6 +721,15 @@ st.write("")
 if st.button("Analyze Customer"):
 
     try:
+
+        # ====================================================
+        # TotalCharges is not shown to the user — the model
+        # still requires it, so it is estimated automatically
+        # as tenure * monthly charges (a reasonable proxy for
+        # lifetime spend when the real figure isn't entered).
+        # ====================================================
+
+        total_estimated = tenure * monthly if tenure > 0 else monthly
 
         customer = pd.DataFrame([{
 
@@ -773,7 +788,7 @@ if st.button("Analyze Customer"):
                 monthly,
 
             "TotalCharges":
-                total
+                total_estimated
         }])
 
 
