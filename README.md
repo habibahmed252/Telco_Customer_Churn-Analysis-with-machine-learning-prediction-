@@ -111,3 +111,6 @@ Eng. Habiba Ahmed Talat
 Artificial Intelligence Student | Data Analysis & Machine Learning
 
 🔗 Streamlit App: [https://txdtvfy3auggwjzd8g5iqb.streamlit.app/]
+🎥 Dashboard Walkthrough
+A complete video walkthrough explaining the Power BI dashboard, its interactive features, and the key insights from the analysis.
+▶️ Watch the Full Dashboard Explanation on YouTube[https://youtu.be/hEOp7bYCT58?si=tv7Wq_r6OEEnf0ts]
