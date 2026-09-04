@@ -16,7 +16,6 @@ st.set_page_config(
 
 # ============================================================
 # REFINED DARK / BLUE THEME
-# (Same color identity, cleaner spacing, better typography)
 # ============================================================
 
 st.markdown("""
@@ -60,9 +59,73 @@ html, body, [class*="css"] {
 
     max-width: 1100px;
 
-    padding-top: 40px;
+    padding-top: 24px;
 
     padding-bottom: 50px;
+}
+
+
+/* ==========================================================
+   TOP BAR (name lives here now)
+========================================================== */
+
+.topbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 16px;
+
+    margin-bottom: 24px;
+
+    border-bottom: 1px solid #141B24;
+}
+
+
+.topbar-brand {
+
+    font-family: 'Sora', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #6E7C8C;
+}
+
+
+.topbar-brand span {
+
+    color: #1597FF;
+}
+
+
+.topbar-author {
+
+    font-family: 'Sora', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #B7C3D1;
+
+    background: #0B1119;
+
+    border: 1px solid #1B2531;
+
+    padding: 7px 16px;
+
+    border-radius: 100px;
+}
+
+
+.topbar-author span {
+
+    color: #1597FF;
 }
 
 
@@ -78,11 +141,11 @@ html, body, [class*="css"] {
 
     border-radius: 22px;
 
-    padding: 50px 40px;
+    padding: 46px 40px;
 
     text-align: center;
 
-    margin-bottom: 40px;
+    margin-bottom: 36px;
 
     box-shadow: 0 20px 60px rgba(0,0,0,.45);
 }
@@ -92,7 +155,7 @@ html, body, [class*="css"] {
 
     font-family: 'Sora', sans-serif;
 
-    font-size: 42px;
+    font-size: 40px;
 
     font-weight: 700;
 
@@ -158,9 +221,23 @@ html, body, [class*="css"] {
 
     margin-top: 10px;
 
-    margin-bottom: 28px;
+    margin-bottom: 26px;
 
     opacity: .85;
+}
+
+
+.group-label {
+
+    font-family: 'Sora', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #1597FF;
+
+    margin-bottom: 4px;
 }
 
 
@@ -207,6 +284,40 @@ label {
     font-weight: 500 !important;
 
     font-size: 14px !important;
+}
+
+
+/* ==========================================================
+   EXPANDER (Optional section)
+========================================================== */
+
+.streamlit-expanderHeader {
+
+    font-family: 'Sora', sans-serif !important;
+
+    font-size: 14px !important;
+
+    font-weight: 600 !important;
+
+    color: #6E7C8C !important;
+
+    background: #0A0F17 !important;
+
+    border: 1px solid #171F29 !important;
+
+    border-radius: 12px !important;
+}
+
+
+.streamlit-expanderContent {
+
+    background: #070B11 !important;
+
+    border: 1px solid #171F29 !important;
+
+    border-top: none !important;
+
+    border-radius: 0 0 12px 12px !important;
 }
 
 
@@ -274,53 +385,33 @@ div.stButton > button:hover {
 
     font-family: 'Sora', sans-serif;
 
-    font-size: 22px;
-
-    font-weight: 600;
-
-    color: #B7C3D1;
-}
-
-
-.probability {
-
-    font-family: 'JetBrains Mono', monospace;
-
-    font-size: 54px;
-
-    font-weight: 700;
-
-    color: #1597FF;
-
-    margin-top: 14px;
-
-    letter-spacing: -1px;
-}
-
-
-.probability-label {
-
-    font-family: 'Inter', sans-serif;
-
-    color: #6E7C8C;
-
-    font-size: 14px;
-
-    margin-top: 4px;
-}
-
-
-.risk {
-
-    font-family: 'Sora', sans-serif;
-
     font-size: 20px;
 
     font-weight: 600;
 
-    color: #F5F8FC;
+    color: #B7C3D1;
+
+    margin-bottom: 22px;
+}
+
+
+.result-message {
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 14px;
+
+    color: #6E7C8C;
 
     margin-top: 22px;
+
+    max-width: 420px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    line-height: 1.6;
 }
 
 
@@ -332,67 +423,17 @@ div.stButton > button:hover {
 
     text-align: center;
 
-    margin-top: 64px;
+    margin-top: 56px;
 
-    padding-top: 28px;
+    padding-top: 22px;
 
     border-top: 1px solid #171F29;
 
-    color: #778494;
-}
-
-
-.footer-created {
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 13px;
-
-    color: #5E6B7A;
-}
-
-
-.footer-name {
-
-    font-family: 'Sora', sans-serif;
-
-    font-size: 21px;
-
-    font-weight: 700;
-
-    color: #E9EFF6;
-
-    margin-top: 6px;
-
-    letter-spacing: .2px;
-}
-
-
-.footer-name span {
-
-    color: #1597FF;
-}
-
-
-.footer-project {
-
-    font-family: 'Inter', sans-serif;
-
-    margin-top: 8px;
-
-    font-size: 13px;
-
     color: #4A5563;
-}
 
+    font-family: 'Inter', sans-serif;
 
-/* ==========================================================
-   PROGRESS
-========================================================== */
-
-div[data-testid="stProgress"] > div > div {
-
-    background-color: #1597FF !important;
+    font-size: 13px;
 }
 
 </style>
@@ -427,7 +468,20 @@ except Exception as e:
 
 
 # ============================================================
-# HEADER  (single line, no indentation/blank lines)
+# TOP BAR — name lives here now
+# ============================================================
+
+st.markdown(
+    '<div class="topbar">'
+    '<div class="topbar-brand">Telco <span>Churn AI</span></div>'
+    '<div class="topbar-author">Eng. <span>Habiba Ahmed</span></div>'
+    '</div>',
+    unsafe_allow_html=True
+)
+
+
+# ============================================================
+# HERO
 # ============================================================
 
 st.markdown(
@@ -443,7 +497,7 @@ st.markdown(
 
 
 # ============================================================
-# CUSTOMER INFORMATION
+# CUSTOMER INFORMATION — core, high-impact fields only
 # ============================================================
 
 st.markdown(
@@ -457,40 +511,18 @@ col1, col2, col3 = st.columns(3)
 
 
 # ============================================================
-# COLUMN 1
+# COLUMN 1 — Tenure & Contract
 # ============================================================
 
 with col1:
 
-    gender = st.selectbox(
-        "Gender",
-        ["Male", "Female"]
+    st.markdown(
+        '<div class="group-label">Tenure &amp; Contract</div>',
+        unsafe_allow_html=True
     )
-
-
-    senior = st.selectbox(
-        "Senior Citizen",
-        [0, 1],
-
-        format_func=lambda x:
-            "Yes" if x == 1 else "No"
-    )
-
-
-    partner = st.selectbox(
-        "Partner",
-        ["Yes", "No"]
-    )
-
-
-    dependents = st.selectbox(
-        "Dependents",
-        ["Yes", "No"]
-    )
-
 
     tenure = st.number_input(
-        "Tenure (months)",
+        "Tenure (months with the company)",
 
         min_value=0,
 
@@ -502,28 +534,76 @@ with col1:
     )
 
 
-    phone = st.selectbox(
-        "Phone Service",
-        ["Yes", "No"]
+    contract = st.selectbox(
+        "Contract",
+
+        [
+            "Month-to-month",
+            "One year",
+            "Two year"
+        ]
+    )
+
+
+    payment = st.selectbox(
+        "Payment Method",
+
+        [
+            "Electronic check",
+            "Mailed check",
+            "Bank transfer (automatic)",
+            "Credit card (automatic)"
+        ]
     )
 
 
 # ============================================================
-# COLUMN 2
+# COLUMN 2 — Charges
 # ============================================================
 
 with col2:
 
-    multiple_lines = st.selectbox(
-        "Multiple Lines",
-
-        [
-            "Yes",
-            "No",
-            "No phone service"
-        ]
+    st.markdown(
+        '<div class="group-label">Charges</div>',
+        unsafe_allow_html=True
     )
 
+    monthly = st.number_input(
+        "Monthly Charges",
+
+        min_value=0.0,
+
+        max_value=20000.0,
+
+        value=70.0,
+
+        step=1.0
+    )
+
+
+    total = st.number_input(
+        "Total Charges (lifetime spend)",
+
+        min_value=0.0,
+
+        max_value=50000.0,
+
+        value=1000.0,
+
+        step=10.0
+    )
+
+
+# ============================================================
+# COLUMN 3 — Internet & Support
+# ============================================================
+
+with col3:
+
+    st.markdown(
+        '<div class="group-label">Internet &amp; Support</div>',
+        unsafe_allow_html=True
+    )
 
     internet = st.selectbox(
         "Internet Service",
@@ -547,28 +627,6 @@ with col2:
     )
 
 
-    online_backup = st.selectbox(
-        "Online Backup",
-
-        [
-            "Backup Enabled",
-            "No Online Backup",
-            "No Internet Service"
-        ]
-    )
-
-
-    device_protection = st.selectbox(
-        "Device Protection",
-
-        [
-            "Protection Enabled",
-            "No Device Protection",
-            "No Internet Service"
-        ]
-    )
-
-
     tech_support = st.selectbox(
         "Tech Support Service",
 
@@ -581,90 +639,109 @@ with col2:
 
 
 # ============================================================
-# COLUMN 3
+# OPTIONAL DETAILS — lower-impact fields, collapsed by default
 # ============================================================
 
-with col3:
+st.write("")
 
-    streaming_tv = st.selectbox(
-        "Streaming TV Service",
+with st.expander("Optional details"):
 
-        [
-            "Streaming TV",
-            "No Streaming TV",
-            "No Internet Service"
-        ]
-    )
+    ocol1, ocol2, ocol3, ocol4 = st.columns(4)
 
+    with ocol1:
 
-    streaming_movies = st.selectbox(
-        "Streaming Movies Service",
+        gender = st.selectbox(
+            "Gender",
+            ["Male", "Female"]
+        )
 
-        [
-            "Streaming Movies",
-            "No Streaming Movies",
-            "No Internet Service"
-        ]
-    )
+        senior = st.selectbox(
+            "Senior Citizen",
+            [0, 1],
 
+            format_func=lambda x:
+                "Yes" if x == 1 else "No"
+        )
 
-    contract = st.selectbox(
-        "Contract",
+        partner = st.selectbox(
+            "Partner",
+            ["Yes", "No"]
+        )
 
-        [
-            "Month-to-month",
-            "One year",
-            "Two year"
-        ]
-    )
+    with ocol2:
 
+        dependents = st.selectbox(
+            "Dependents",
+            ["Yes", "No"]
+        )
 
-    paperless = st.selectbox(
-        "Paperless Billing",
+        phone = st.selectbox(
+            "Phone Service",
+            ["Yes", "No"]
+        )
 
-        [
-            "Yes",
-            "No"
-        ]
-    )
+        multiple_lines = st.selectbox(
+            "Multiple Lines",
 
+            [
+                "Yes",
+                "No",
+                "No phone service"
+            ]
+        )
 
-    payment = st.selectbox(
-        "Payment Method",
+    with ocol3:
 
-        [
-            "Electronic check",
-            "Mailed check",
-            "Bank transfer (automatic)",
-            "Credit card (automatic)"
-        ]
-    )
+        online_backup = st.selectbox(
+            "Online Backup",
 
+            [
+                "Backup Enabled",
+                "No Online Backup",
+                "No Internet Service"
+            ]
+        )
 
-    monthly = st.number_input(
-        "Monthly Charges",
+        device_protection = st.selectbox(
+            "Device Protection",
 
-        min_value=0.0,
+            [
+                "Protection Enabled",
+                "No Device Protection",
+                "No Internet Service"
+            ]
+        )
 
-        max_value=20000.0,
+        paperless = st.selectbox(
+            "Paperless Billing",
 
-        value=70.0,
+            [
+                "Yes",
+                "No"
+            ]
+        )
 
-        step=1.0
-    )
+    with ocol4:
 
+        streaming_tv = st.selectbox(
+            "Streaming TV Service",
 
-    total = st.number_input(
-        "Total Charges",
+            [
+                "Streaming TV",
+                "No Streaming TV",
+                "No Internet Service"
+            ]
+        )
 
-        min_value=0.0,
+        streaming_movies = st.selectbox(
+            "Streaming Movies Service",
 
-        max_value=50000.0,
-
-        value=1000.0,
-
-        step=10.0
-    )
+            [
+                "Streaming Movies",
+                "No Streaming Movies",
+                "No Internet Service"
+            ]
+        )
 
 
 # ============================================================
@@ -761,12 +838,14 @@ if st.button("Analyze Customer"):
 
 
         # ====================================================
-        # RISK
+        # RISK + COLOR (blue = fine, red = risky)
         # ====================================================
 
         if probability < 0.30:
 
             risk = "Low Risk"
+
+            ring_color = "#1597FF"
 
             message = (
                 "This customer currently shows "
@@ -777,6 +856,8 @@ if st.button("Analyze Customer"):
 
             risk = "Medium Risk"
 
+            ring_color = "#1597FF"
+
             message = (
                 "This customer shows a moderate "
                 "churn risk and may need attention."
@@ -786,6 +867,8 @@ if st.button("Analyze Customer"):
 
             risk = "High Risk"
 
+            ring_color = "#FF4D6A"
+
             message = (
                 "This customer shows a high churn "
                 "risk and may require retention action."
@@ -793,39 +876,32 @@ if st.button("Analyze Customer"):
 
 
         # ====================================================
-        # RESULT  (single line, no indentation/blank lines)
+        # CIRCULAR GAUGE (SVG ring, fills with risk color)
         # ====================================================
+
+        radius = 80
+        stroke_width = 14
+        circumference = 2 * 3.14159265 * radius
+        filled = circumference * probability
+        offset = circumference - filled
+
+        gauge_svg = f'''
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="{radius}" fill="none" stroke="#141B24" stroke-width="{stroke_width}"></circle>
+            <circle cx="100" cy="100" r="{radius}" fill="none" stroke="{ring_color}" stroke-width="{stroke_width}" stroke-linecap="round" stroke-dasharray="{circumference:.2f}" stroke-dashoffset="{offset:.2f}" transform="rotate(-90 100 100)"></circle>
+            <text x="100" y="94" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="34" font-weight="700" fill="#F5F8FC">{percentage:.1f}%</text>
+            <text x="100" y="120" text-anchor="middle" font-family="Sora, sans-serif" font-size="14" font-weight="600" fill="{ring_color}">{risk}</text>
+        </svg>
+        '''
 
         st.markdown(
             '<div class="result-card">'
             '<div class="result-title">Prediction Result</div>'
-            f'<div class="probability">{percentage:.1f}%</div>'
-            '<div class="probability-label">Estimated Customer Churn Probability</div>'
-            f'<div class="risk">{risk}</div>'
+            f'{gauge_svg}'
+            f'<div class="result-message">{message}</div>'
             '</div>',
             unsafe_allow_html=True
         )
-
-
-        st.write("")
-
-
-        st.progress(
-            float(probability)
-        )
-
-
-        if probability < 0.30:
-
-            st.success(message)
-
-        elif probability < 0.60:
-
-            st.warning(message)
-
-        else:
-
-            st.error(message)
 
 
     except Exception as e:
@@ -838,16 +914,12 @@ if st.button("Analyze Customer"):
 
 
 # ============================================================
-# FOOTER  (single line, no indentation/blank lines)
+# FOOTER
 # ============================================================
 
 st.markdown(
     '<div class="footer">'
-    '<div class="footer-created">Created by</div>'
-    '<div class="footer-name">Eng. <span>Habiba Ahmed</span></div>'
-    '<div class="footer-project">'
     'Telco Customer Churn Prediction • Machine Learning • XGBoost'
-    '</div>'
     '</div>',
     unsafe_allow_html=True
 )
