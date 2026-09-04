@@ -71,7 +71,7 @@ Prediction probability
 An easy-to-understand result
 
 🔗 Live Streamlit App:
-[Add your Streamlit link here]
+[https://txdtvfy3auggwjzd8g5iqb.streamlit.app/]
 
 🛠️ Technologies Used
 Python
